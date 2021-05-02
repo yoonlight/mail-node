@@ -10,6 +10,16 @@ const mail = nodemailer.createTransport({
   },
 })
 
+// local smtp connect
+// const mail = nodemailer.createTransport({
+//   host: '127.0.0.1',
+//   port: 25,
+//   auth: {
+//     user: process.env.EMAIL_ADDR,
+//     pass: process.env.EMAIL_PWD,
+//   },
+// })
+
 let message = {
   // Comma separated list of recipients
   to: process.env.EMAIL_ADDR,
